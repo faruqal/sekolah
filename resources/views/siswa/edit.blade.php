@@ -10,7 +10,7 @@
 									<h3 class="panel-title">Inputs Data Siswa</h3>
 								</div>
 								<div class="panel-body">
-                                        <form action="{{url('siswa/'.$siswa->id.'/update')}}" method="POST">
+                                        <form action="{{route('siswa.update',['id'=>$siswa->id])}}" method="POST"> @csrf @method('put')
                    
                                             <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
@@ -35,7 +35,6 @@
                                                 <label for="exampleFormControlTextarea1">Alamat</label>
                                                 <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$siswa->alamat}}</textarea>
                                             </div>
-                                            {{csrf_field()}}
                                             <div class="modal-footer">
                                                     <button type="submit" class="btn btn-primary btn-lg float-left">Edit Data</button>
                                             </div>
