@@ -10,7 +10,7 @@
 									<h3 class="panel-title">Inputs Data Siswa</h3>
 								</div>
 								<div class="panel-body">
-                                        <form action="/sekolah/siswa/{{$siswa->id}}/update" method="POST">
+                                        <form action="{{url('siswa/'.$siswa->id.'/update')}}" method="POST">
                    
                                             <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
